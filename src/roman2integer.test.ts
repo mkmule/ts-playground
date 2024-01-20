@@ -21,6 +21,7 @@ describe('romanToInt', () => {
 
     describe('Cases with subtraction', () => {
       const cases = [
+        ['IV', 4],
         ['MCMXCIV', 1994],
       ];
 
