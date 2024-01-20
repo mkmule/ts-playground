@@ -9,5 +9,12 @@ const dictionary = {
 };
 
 export function romanToInt(s: string): number {
-  return Number(s);
+  let count = 0;
+
+  for(let i = 0; i<s.length; i++) {
+    const currentChar = s.charAt(i);
+    count += dictionary[currentChar];
+  }
+
+  return count;
 }
