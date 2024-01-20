@@ -26,7 +26,6 @@ export function romanToInt(s: string): number {
       const allowedRootSymbols = subtractionRules[currentChar] || [];
 
       if (allowedRootSymbols.includes(nextChar)) {
-        console.log('allowed', dictionary[nextChar] - dictionary[currentChar]);
         count += (dictionary[nextChar] - dictionary[currentChar]);
         i++;
       } else {
