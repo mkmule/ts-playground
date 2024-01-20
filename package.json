@@ -1,0 +1,23 @@
+{
+  "name": "ts-playground",
+  "version": "1.0.0",
+  "description": "Playground for typescript with jest testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [
+    "typescript",
+    "jest",
+    "test",
+    "playground"
+  ],
+  "author": "Serhiy",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  }
+}
