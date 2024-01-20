@@ -8,15 +8,25 @@ describe('romanToInt', () => {
   });
 
   describe('Convert roman numerals to integers', () => {
-    const cases = [
-      ['III', 3],
-      ['LVIII', 58],
-      ['MCMXCIV', 1994],
-    ];
+    describe('Simple cases without subtraction', () => {
+      const cases = [
+        ['III', 3],
+        ['LVIII', 58],
+      ];
 
+      test.each(cases)(`converts %p to %p`, (input: any, output) => {
+        expect(romanToInt(String(input))).toBe(output);
+      });
+    });
 
-    test.each(cases)(`converts %p to %p`, (input: any, output) => {
-      expect(romanToInt(String(input))).toBe(output);
+    describe('Cases with subtraction', () => {
+      const cases = [
+        ['MCMXCIV', 1994],
+      ];
+
+      test.each(cases)(`converts %p to %p`, (input: any, output) => {
+        expect(romanToInt(String(input))).toBe(output);
+      });
     });
   });
 });
