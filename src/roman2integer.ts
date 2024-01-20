@@ -9,6 +9,5 @@ const dictionary = {
 };
 
 export function romanToInt(s: string): number {
-  console.log(s);
-  return -1;
+  return Number(s);
 }
