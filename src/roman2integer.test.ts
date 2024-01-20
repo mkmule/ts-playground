@@ -1,7 +1,7 @@
 import { romanToInt } from './roman2integer';
 
 describe('romanToInt', () => {
-  describe('Check types', () => {
+  describe('Return correct type', () => {
     test('returns integer', () => {
       expect(typeof romanToInt('I')).toBe('number');
     });
