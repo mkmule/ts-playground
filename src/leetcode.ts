@@ -44,3 +44,23 @@ function romanToIntSmart(s: string): number {
 }
 
 export const romanToInt = romanToIntSmart;
+
+/*
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+ */
+
+export function strStr(haystack: string, needle: string): number {
+  // Using String methods
+  // return haystack.indexOf(needle);
+
+  // Using custom implementation
+  if (haystack.length < needle.length) {
+    return -1;
+  }
+
+  for (let i = 0; i < haystack.length - (needle.length + 1); i++) {
+    if (haystack.slice(i, i + needle.length) === needle) return i;
+  }
+
+  return -1;
+}

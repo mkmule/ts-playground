@@ -1,4 +1,4 @@
-import { romanToInt } from './roman2integer';
+import { romanToInt, strStr } from './leetcode';
 
 describe('romanToInt', () => {
   describe('Return correct type', () => {
@@ -32,3 +32,21 @@ describe('romanToInt', () => {
     });
   });
 });
+
+describe('strStr', () => {
+  describe('edge cases', () => {
+    test('return -1 if empty string', () => {
+      expect(strStr('', 'something')).toBe(-1);
+    });
+
+    test('return -1 if haystack is smaller then needle', () => {
+      expect(strStr('123', '12345')).toBe(-1);
+    });
+  });
+
+  describe('not empty strings', () => {
+    test('return 0 for `sadbutsad` and `sad`', () => {
+      expect(strStr('sadbutsad', 'sad')).toBe(0);
+    });
+  });
+})
