@@ -64,3 +64,16 @@ export function strStr(haystack: string, needle: string): number {
 
   return -1;
 }
+
+export const strPermutation = (str: string): string[] => {
+  if (str.length === 0) return [];
+  if (str.length === 1) return [str];
+  if (str.length === 2) return [str, `${str.charAt(1)}${str.charAt(0)}`];
+
+  return str.split('').reduce((acc, char, index) => {
+    const permutationsWithoutRoot = strPermutation(str.slice(0, index) + str.slice(index + 1));
+    const permutationsRest = permutationsWithoutRoot.map(perm => `${char}${perm}`);
+
+    return [...acc, ...permutationsRest];
+  }, []);
+};

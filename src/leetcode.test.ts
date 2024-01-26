@@ -1,4 +1,4 @@
-import { romanToInt, strStr } from './leetcode';
+import { romanToInt, strPermutation, strStr } from './leetcode';
 
 describe('romanToInt', () => {
   describe('Return correct type', () => {
@@ -47,6 +47,16 @@ describe('strStr', () => {
   describe('not empty strings', () => {
     test('return 0 for `sadbutsad` and `sad`', () => {
       expect(strStr('sadbutsad', 'sad')).toBe(0);
+    });
+  });
+})
+
+describe('strPermutation', () => {
+  describe('valid strings', () => {
+    test('returns 6 elements for `aab`', () => {
+      const result = strPermutation('aab');
+      expect(result.length).toBe(6);
+      expect(result).toEqual([ 'aab', 'aba', 'aab', 'aba', 'baa', 'baa' ]);
     });
   });
 })
